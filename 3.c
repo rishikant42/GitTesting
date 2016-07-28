@@ -2,6 +2,6 @@
 
 int main()
 {
-printf("This is c file");
+printf("This is c language code");
 return 0;
 }
