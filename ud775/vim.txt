@@ -1,0 +1,258 @@
+h for move left
+l for move right
+j for move down
+k for move up
+
+i --> insert before letter
+I --> Insert at begging of line
+
+a --> append after letter
+A --> append at end of line
+
+o --> open a new line after a current line
+O --> open a new line before a current line
+
+r --> replace a single character
+R --> replace all following characters till we not stop by pressing Esc key.
+
+w --> skip to next word with consider symbols,.
+W --> skip to next work ignoring symbols
+
+e --> move to end of word with conside symbols.
+E --> move end of word ignoring symbols (symbols are .,,$,% etc)
+
+c --> change whatever we spicfy(using a modifier)
+c --> chang till end of line
+
+x --> delete a specific latter.  x === Delete keyword 
+X --> delete before(prvs) chrctr. X === Backspace.
+
+c --> change whatever we spicfy(using a modifier)
+
+d --> delete using modifier.
+dd --> delete whole line.
+D --> delete whole line from a given chrctr.
+
+s --> delete a spicfic letter and apply insert mode.
+S --> delete a whole line and apply insert mode.
+
+y --> yank(copy) whatever we specify using modifier
+Y --> copy the whole line.
+yy --> yank whole line.
+
+p --> paste after specify charcter.
+P --> paste before specify character.
+
+b --> move backward in direction.
+
+d8d --> delete given and below 7 line(Total = 8)
+d7j --> delete given and below 7 lines(total = 8)
+d7k --> delete given and above 7 lines(total = 8)
+
+dd --> delete given line.
+d2w --> delete two words.(given + next)
+d2l --> delete two char.(given + next)
+d% --> delete whole block represent by brackets.
+7dd --> delete given and below 6 line.
+
+yy --> yank given line.
+y7j --> yank given and below 7 lines(total = 8)
+y7k --> yank given and above 7 lines(total = 8)
+y% --> yank whole block represent by bracket.
+7yy --> yank give and below 6 line.
+
+y2w --> yank two words.(given + next)
+y2l --> yank two char.(given + next)
+
+gg --> move cursor to start of document.
+G --> move cursor to end of document.
+
+5gg = 5G --> move cursor after 5 line form document start.
+
+10p --> paste 10 times.
+
+:w --> save file.
+:q --> quit file.
+:q! --> quit without editing.
+:wq --> save and quit.
+
+:e file.txt: open 'file.txt' for edit.
+
+search and replace.
+
+	/given --> search the 'given' word.
+
+	n --> move to next instance.
+	N --> move to prvs instance.
+
+	/ --> search forward(below the cursor).
+	? --> search backward(above the cursor).
+	n --> move to next search result accrording to search type i.e / or ?.
+	N --> move to prvs search result accrording to search type i.e / or ?.
+
+:start,ends/query/replace/<flags> --> search and replace in specify area by start and ends numbers.
+
+:1,4s/apple/mango --> search 'apple' from line 1 to 4 and replace 'apple' with 'mango' (Replace only first 'apple' letter)
+:1,4s/apple/mango/g --> search 'apple' from line 1 to 4 and replace 'apple' with 'mango in all instance in every line.'
+
+:%/query/replace/<flags> --> search and replace in entire file.
+
+:%s/apple/mango/g --> search 'apple' in entire file and repace every instance of 'apple' with 'mango'
+:%s/apple/mango --> search 'apple' in entire file and repace only first  instance of 'apple' with 'mango'
+
+
+How to insert at multiple position simontaneously?
+
+method1 :
+
+If we want put ## in begging of any three line.
+
+
+    Move the cursor in begging of line.
+    Enter visual block mode (ctrl-v).
+    Press j three times.
+    Press I.
+    Type in ##
+    Press esc.
+
+we can put not only in begging but also anywhere by similar approch.Remember to spicfy postion by cursor where we want to insert.
+
+method2:
+
+    :start,end/query/^/##/
+
+    :10,12s/^/##/
+
+If we want to insert in begging of whole file.
+
+    :%s/^/##/
+
+for more imformation, go to:
+
+http://stackoverflow.com/questions/9549729/in-vim-how-do-i-effectively-insert-the-same-characters-across-multiple-lines
+
+
+How to delete ## at multiple position?
+
+    :10,12s/#//g
+
+       or
+
+    :10,12s/##/
+
+how to remove space from begging in line 7 to 13?
+ 
+    :7,13s/ //
+
+How to do undo and redo?
+
+u --> for undo
+
+ctrl-r --> for redo.
+
+
+replace // with ## (Need to use escape method)
+
+	:%s/\/\//##
+
+replace ## with // (Need to use escape method)
+	
+	:%s/##/\/\/
+
+
+putting // in begging of line 22,23,24 (Need to use escape method)
+	
+	:22,24s/^/\/\/
+
+remove //// from begging of line 22 and 23 (Need to use escape method)
+
+	:22,23s/\/\/\/\//	
+
+:split --> split window horizontally. or use (ctrl + w + s)
+:vsplit --> split window vertically. or use (ctrl + w + v)
+
+:split rk.txt --> split current window and open rk.txt file in edit mode.
+
+ctrl + ww --> change tab.
+ctrl + w + h --> move to left tab.
+ctrl + w + l --> move to right tab.
+ctrl + w + j --> move to down tab.
+ctrl + w + k --> move to up tab.
+
+tabnew --> open a new tab.
+tabp --> move to prvs tab.
+tabn --> move to next tab.
+tabclose --> close the tab. or use (ctrl + w + c)
+
+
+how to mark a line in file?
+
+	'm' key is used to mark a line.
+
+ma --> mark a given with 'a' char.   i.e (press, m + a)
+'a --> jump to line that specify by char 'a'.
+
+mt --> mark a given with 't' char.
+'t --> jump to line that specify by char 't'.
+
+
+	utility of vim writing programming code
+
+% --> jump to matching bracket.
+> --> indent (work with modifier)
+< --> de-indent (work with modifier)
+
+>> --> indent given line.
+3>> --> indent given and below 2 line.
+>3j --> indent given and below 3 line.
+>3k --> indent given and above 3 line.
+>% --> indent whole block represent by corresponding bracket.
+
+<< --> deindent given line.
+3<< --> deindent given and below 2 line.
+<3j --> deindent given and below 3 line.
+<3k --> deindent given and above 3 line.
+<% --> deindent whole block represent by corresponding bracket.
+
+= --> proper indent (use with modifier)
+== --> indent given line.
+3== --> indent given and below 2 line.
+=G --> indent below everything.
+=gg --> indent above everything.
+=3j --> indent given and below 3 line.
+=3k --> indent given and above 3 line.
+
+        *** We can also use visual mode(ctrl + v) to indent ***
+	select the code which is needed to be indent and press '>' or '=' key.
+
+        **Visual mode (ctrl + v) can be apply on any command like copy, delete, insert etc**
+	how to copy or delete in visual mode?
+		select the code which is need to copy or delete and press 'y' or 'd' for yank and delete respectively
+
+
+~ --> change case of character.
+5~ --> change case of given and next 4 character.
+
+:set nu --> set line number
+:set rnu --> set relative line number
+:set tabstop=N --> set tab to N number space.
+:set tabstop=4 --> set tab to 4 space.
+
+:colorscheme elflord --> set theme to elford color.
+:set colorcolumn=30  --> set a line at distance of 30 char.
+:set ruler --> show position info.(by default it is set in vim, we donot need to set it)
+
+
+How to put '/\' in first 5 lines:
+	:1,5s/^/\/\
+
+
+How to rmv '/\' in first 5 lines:
+	:1,5s/\/\\/
+
+		or
+
+	:1,5s/\/\\//
+
+How to replace '/\' with '##':
+	:1,5s/\/\\/##/
