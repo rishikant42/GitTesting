@@ -1,0 +1,32 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+When I initialized a repository to git create a new directory called ".git". To create a new repository I just need to surf to it and do the command "git init".
+___________________________________
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+The staging area is a intermediate repository that allow us to add just de files that we want to commit. It is very powerful because it give more flexibility to the choices of the programmer because he can commit just the files that he want.
+
+_____________________________
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+The staging area show the files changed.
+
+_________________________________________
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Create a branch helps the programmer to create a new path to developer the program. It allow to create parallel paths of development and try new solutions and perspectives.
+
+____________________________________________
+
+How do the diagrams help you visualize the branch structure?
+
+When I build a diagram I can understand more clearly the structure of the branches so, I can to move on by the commits knowing what each branch and commit are doing
+
+______________________________________________
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+I prefer merge manually. It allow me to make some branches as backup and have more control about my project.

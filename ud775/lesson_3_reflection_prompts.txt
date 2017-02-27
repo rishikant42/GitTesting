@@ -1,0 +1,42 @@
+When would you want to use a remote repository rather than keeping all your work local?
+
+A remote repository allows collaborative work and keep online backup.
+
+_______________________________________________________________________
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+Make the pull changes manually allow us to have more control over our projects. Maybe, somebody could to make some change that we disagree, so, we can to choose don't pull the changes.
+
+_______________________________________________________________________
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+Let's go!
+Branches - are paths of development. You can have different paths in a same project.
+Clones - are local copies of a directory.
+Forks - are GitHub copies of a directory.
+You use a fork when you don't want or don't have permission to change a project. So, you can copy the directory and to work on this copy.
+You use a clone, when do you want to make o local copy of a directory.
+You use a branch for to have a new path of a project development.
+
+________________________________________________________________
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+First, you avoid the re-work. So, you don't do the work that another colaborator did.
+
+Second, you spend your time on the next feature.
+
+_________________________________________________________________
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+Without to use Git or GitHub to collaborate work is harder. Mainly if you are part of a remote team of development. Without git, you could use dropbox but the chance of have a broken code or re-work is very big than with git. Now that I am learning about Git, I can't imagine me working without it. In truly, I guess that I will use git for all my projects.
+
+__________________________________________________________________
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+Well, even that I need to make some change that could put the master project in dangerous. So, I can to creat a new branch [ using the command git branch new_branch] and then checkout to it [ using the command git checkout new_branch]. Now I can make experimental changes and then just it is good to the project I would to merge that changes to the master branch. Another reason to create a new branch could be in the collaborate work where I would like to make some changes whithout impact the main branch. It generally happs when I don't have permition to chance the master branch.
+
+This approach have many benefits like to get freedom to make my work without fear to breaking the master branch.
