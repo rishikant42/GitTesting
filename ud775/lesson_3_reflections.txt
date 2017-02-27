@@ -2,6 +2,8 @@ Q. When would you want to use a remote repository rather than keeping all your w
 
 A. You would do this when you want to work with other people.
 
+A remote repository allows collaborative work and keep online backup.
+
 ------------------
 
 Q. Why might you want to always pull changes manually rather than having Git automatically 
@@ -9,6 +11,8 @@ stay up-to-date with your remote repository?
 
 A. Pulling changes manually is always safer than making having Git automatically do it.
 There might be things added which you do not want in your branch.
+
+Make the pull changes manually allow us to have more control over our projects. Maybe, somebody could to make some change that we disagree, so, we can to choose don't pull the changes.
 
 ------------------
 
@@ -18,6 +22,14 @@ A. Fork - create a version of the repo to work from. doesn't affect the original
    Clone - create a local copy of a repo. carry out changes, push to it
    Branch - create a branch to work on seperate to the 'master' branch
 
+Let's go!
+Branches - are paths of development. You can have different paths in a same project.
+Clones - are local copies of a directory.
+Forks - are GitHub copies of a directory.
+You use a fork when you don't want or don't have permission to change a project. So, you can copy the directory and to work on this copy.
+You use a clone, when do you want to make o local copy of a directory.
+You use a branch for to have a new path of a project development.
+
 ------------------
 
 Q. What is the benefit of having a copy of the last known state of the remote
@@ -25,6 +37,10 @@ stored locally?
 
 A. If there is ever a problem with merging, it's useful to see the last known
 state.
+
+First, you avoid the re-work. So, you don't do the work that another colaborator did.
+
+Second, you spend your time on the next feature.
 
 -----------------
 
@@ -34,6 +50,8 @@ easier, and what would be harder?
 A. It would be very hard. A lot of manual labour involved, talking, emails 
 etc. Finding conflicts would be difficult and working at the same time would
 almost be impossible.
+
+Without to use Git or GitHub to collaborate work is harder. Mainly if you are part of a remote team of development. Without git, you could use dropbox but the chance of have a broken code or re-work is very big than with git. Now that I am learning about Git, I can't imagine me working without it. In truly, I guess that I will use git for all my projects.
 
 ------------------
 
