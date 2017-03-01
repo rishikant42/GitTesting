@@ -2,7 +2,7 @@
 https://www.udacity.com/course/how-to-use-git-and-github--ud775
 ```
 GitHub is the place to host your repos and collaborate with people
-Github is free `Git` hosting service
+Github is free Git hosting service
 
 And Git, itself, being the version control tool that GitHub is built on.
 
