@@ -2,8 +2,8 @@
 
 int main()
 {
-printf("Hello");
-    printf("awesome work");
+    printf("Hello");
+printf("awesome work");
     printf("nice work");
     printf("that's great");
     printf("cool stuff");
